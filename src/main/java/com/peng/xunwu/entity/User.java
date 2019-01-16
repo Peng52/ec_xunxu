@@ -1,5 +1,7 @@
 package com.peng.xunwu.entity;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -10,6 +12,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "user")//因为数据库中的表名是user小写。？？
+@Data
 public class User {
     /**
      *主键ID
