@@ -2,6 +2,7 @@ package com.peng.xunwu.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
@@ -31,7 +32,9 @@ public class DataSourceConfig {
     //注入spring.datasource的配置信息
     @ConfigurationProperties(prefix = "spring.datasource")
     public DataSource getDataSource(){
-        return new DruidDataSource();
+
+        return DataSourceBuilder.create().build();
+        /*return new DruidDataSource();*/
     }
     //创建实体类管理工厂
     @Bean

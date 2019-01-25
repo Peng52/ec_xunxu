@@ -37,6 +37,7 @@ public class User {
      */
     //数据库中是有下划线，这里是驼峰，什么情况是默认直接可以映射到数据库的
      //哪些情况下需要使用@Column注解
+    @Column(name="PHONE_NUMBER")
     private String phoneNumber;
     /**
      *状态
@@ -45,14 +46,17 @@ public class User {
     /**
      *创建时间
      */
+    @Column(name = "CREATE_TIME")
     private Date createTime;
     /**
      *最后一次登录时间
      */
+    @Column(name = "LAST_LOGIN_TIME")
     private Date lastLoginTime;
     /**
      *最后一次更新时间
      */
+    @Column(name="LAST_UPDATE_TIME")
     private Date lastUpdateTime;
     /**
      *用户头像
