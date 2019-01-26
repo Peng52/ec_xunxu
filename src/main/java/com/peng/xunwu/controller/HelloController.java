@@ -18,7 +18,7 @@ public class HelloController {
     public String error(){
         System.out.println("405");
         System.out.println("grg");
-        System.out.println("git");
+        System.out.println("git checkout");
         return "uuuuu";
     }
 
